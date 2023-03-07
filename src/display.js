@@ -9,4 +9,4 @@ export const displayScore = () => {
   displayName.textContent = `${inputName.value} : ${inputScore.value} `;
   inputName.value = '';
   inputScore.value = '';
-}
+};

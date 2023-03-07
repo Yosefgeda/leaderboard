@@ -1,79 +1,79 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
 }
 
 .header-cont {
-    margin-top: 10%;
-    text-align: center;
+  margin-top: 10%;
+  text-align: center;
 }
 
 .add-recent {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
 }
 
 .generated-input {
-    border: 2px solid rgb(66, 65, 65);
-    border-radius: 3px;
-    margin-top: 5%;
-    height: 100px;
-    overflow-y: scroll;
-}
-
-.generated-input p:nth-child(odd) {
-    background-color: rgb(206, 209, 209);
+  border: 2px solid rgb(66, 65, 65);
+  border-radius: 3px;
+  margin-top: 5%;
+  height: 100px;
+  overflow-y: scroll;
 }
 
 .generated-input p {
-    margin: 0;
-    padding: 5px;
+  margin: 0;
+  padding: 5px;
+}
+
+.generated-input p:nth-child(odd) {
+  background-color: rgb(206, 209, 209);
 }
 
 .head-btn-cont {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 .head-btn-cont h2 {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .head-btn-cont button {
-    padding: 2px 5px;
-    border: .5px solid rgb(150, 147, 147);
-    border-radius: 0;
-    font-size: 10px;
+  padding: 2px 5px;
+  border: 0.5px solid rgb(150, 147, 147);
+  border-radius: 0;
+  font-size: 10px;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .submit-score {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
 }
 
 .submit-score h2 {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .submit-score button {
-    padding: 2px 5px;
-    border: .5px solid rgb(150, 147, 147);
-    border-radius: 0;
-    font-size: 15px;
-    font-weight: bold;
+  padding: 2px 5px;
+  border: 0.5px solid rgb(150, 147, 147);
+  border-radius: 0;
+  font-size: 15px;
+  font-weight: bold;
 }
