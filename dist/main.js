@@ -120,36 +120,20 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/display.js":
-/*!************************!*\
-  !*** ./src/display.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"sendData\": () => (/* binding */ sendData)\n/* harmony export */ });\nconst generatedInput = document.querySelector('.generated-input');\r\nconst inputName = document.querySelector('.input-name');\r\nconst inputScore = document.querySelector('.input-score');\r\nconst reciver = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qVoyo0IhhBeGWoUuwCRg/scores';\r\n\r\n\r\n// export const displayScore = () => {\r\n//   const displayName = document.createElement('p');\r\n//   generatedInput.appendChild(displayName);\r\n//   displayName.textContent = `${inputName.value} : ${inputScore.value} `;\r\n//   inputName.value = '';\r\n//   inputScore.value = '';\r\n// }\r\n\r\nconst sendData = async () => {\r\n  const userName = inputName.value;\r\n  const userScore = inputScore.value;\r\n\r\n  const data = {\r\n    user: userName, \r\n    score: userScore\r\n  };\r\n  const options = {\r\n    method: 'POST',\r\n    headers: {\r\n      'Content-Type': 'application/json',\r\n    },\r\n    body: JSON.stringify(data)\r\n  };\r\n  await fetch(reciver, options);\r\n  inputName.value = '';\r\n  inputScore.value = '';\r\n};\n\n//# sourceURL=webpack://leaderboard/./src/display.js?");
-
-/***/ }),
-
-/***/ "./src/generateData.js":
-/*!*****************************!*\
-  !*** ./src/generateData.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"seeData\": () => (/* binding */ seeData)\n/* harmony export */ });\n// import { method } from \"lodash\";\r\n\r\nconst reciver = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qVoyo0IhhBeGWoUuwCRg/scores/';\r\nconst generatedInput = document.querySelector('.generated-input');\r\nconst inputName = document.querySelector('.input-name');\r\nconst inputScore = document.querySelector('.input-score');\r\n\r\n// const displayScore = () => {\r\n//     const displayName = document.createElement('p');\r\n//     generatedInput.appendChild(displayName);\r\n//     displayName.textContent = `${inputName.value} : ${inputScore.value} `;\r\n//     // inputName.value = '';\r\n//     // inputScore.value = '';\r\n//   }\r\n\r\nconst seeData  = async () => {\r\n    const response = await fetch(reciver, { method: 'GET' });\r\n    let result = await response.json();\r\n    // const outPut = await result.outPut;\r\n    console.log(typeof(result), result);\r\n    //JSON.parse(result);\r\n    generatedInput.innerHTML = '';\r\n    for (let i = 0; i < result.result.length; i++) {\r\n      //console.log(result.result[i].user + ': ' + result.result[i].score);\r\n    \r\n    const displayName = document.createElement('p');\r\n    generatedInput.appendChild(displayName);\r\n    displayName.textContent = `${result.result[i].user } : ${result.result[i].score} `;\r\n    }\r\n\r\n    // for (const element in result) {\r\n      \r\n     \r\n    // }\r\n\r\n    // generatedInput.innerHTML = '';\r\n    // for (const element in result) {\r\n    \r\n    // const displayName = document.createElement('p');\r\n    // generatedInput.appendChild(displayName);\r\n    // displayName.textContent = `${element.user} : ${element.score} `;\r\n    // };    \r\n}\r\n\r\n\n\n//# sourceURL=webpack://leaderboard/./src/generateData.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _display_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./display.js */ \"./src/display.js\");\n/* harmony import */ var _generateData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./generateData.js */ \"./src/generateData.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst submitBtn = document.querySelector('.submit-btn');\r\nconst refreshBtn = document.querySelector('.refresh');\r\n\r\nsubmitBtn.addEventListener('click', () => {\r\n  _display_js__WEBPACK_IMPORTED_MODULE_1__.sendData();\r\n});\r\n\r\nrefreshBtn.addEventListener('click', () => {\r\n  _generateData_js__WEBPACK_IMPORTED_MODULE_2__.seeData();\r\n})\r\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
 =======
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_display_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/display.js */ \"./src/modules/display.js\");\n/* harmony import */ var _modules_generateData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/generateData.js */ \"./src/modules/generateData.js\");\n\n\n\n\nconst submitBtn = document.querySelector('.submit-btn');\nconst refreshBtn = document.querySelector('.refresh');\n\nsubmitBtn.addEventListener('click', () => {\n  _modules_display_js__WEBPACK_IMPORTED_MODULE_1__.sendData();\n});\n\nrefreshBtn.addEventListener('click', () => {\n  _modules_generateData_js__WEBPACK_IMPORTED_MODULE_2__.seeData();\n});\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_display_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/display.js */ \"./src/modules/display.js\");\n/* harmony import */ var _modules_generateData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/generateData.js */ \"./src/modules/generateData.js\");\n\r\n\r\n\r\n\r\nconst submitBtn = document.querySelector('.submit-btn');\r\nconst refreshBtn = document.querySelector('.refresh');\r\n\r\nsubmitBtn.addEventListener('click', () => {\r\n  _modules_display_js__WEBPACK_IMPORTED_MODULE_1__.sendData();\r\n});\r\n\r\nrefreshBtn.addEventListener('click', () => {\r\n  _modules_generateData_js__WEBPACK_IMPORTED_MODULE_2__.seeData();\r\n});\r\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+>>>>>>> ab27e57730533f1b373f5c2bde649231677e210b
 
 /***/ }),
 
@@ -159,7 +143,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+<<<<<<< HEAD
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"sendData\": () => (/* binding */ sendData)\n/* harmony export */ });\nconst inputName = document.querySelector('.input-name');\nconst inputScore = document.querySelector('.input-score');\nconst reciver = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qVoyo0IhhBeGWoUuwCRg/scores';\n\nconst sendData = async () => {\n  const userName = inputName.value;\n  const userScore = inputScore.value;\n\n  const data = {\n    user: userName,\n    score: userScore,\n  };\n  const options = {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify(data),\n  };\n  await fetch(reciver, options);\n  inputName.value = '';\n  inputScore.value = '';\n};\n\n//# sourceURL=webpack://leaderboard/./src/modules/display.js?");
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"sendData\": () => (/* binding */ sendData)\n/* harmony export */ });\nconst generatedInput = document.querySelector('.generated-input');\r\nconst inputName = document.querySelector('.input-name');\r\nconst inputScore = document.querySelector('.input-score');\r\nconst reciver = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qVoyo0IhhBeGWoUuwCRg/scores';\r\n\r\n// export const displayScore = () => {\r\n//   const displayName = document.createElement('p');\r\n//   generatedInput.appendChild(displayName);\r\n//   displayName.textContent = `${inputName.value} : ${inputScore.value} `;\r\n//   inputName.value = '';\r\n//   inputScore.value = '';\r\n// }\r\n\r\nconst sendData = async () => {\r\n  const userName = inputName.value;\r\n  const userScore = inputScore.value;\r\n\r\n  const data = {\r\n    user: userName,\r\n    score: userScore,\r\n  };\r\n  const options = {\r\n    method: 'POST',\r\n    headers: {\r\n      'Content-Type': 'application/json',\r\n    },\r\n    body: JSON.stringify(data),\r\n  };\r\n  await fetch(reciver, options);\r\n  inputName.value = '';\r\n  inputScore.value = '';\r\n};\n\n//# sourceURL=webpack://leaderboard/./src/modules/display.js?");
+>>>>>>> ab27e57730533f1b373f5c2bde649231677e210b
 
 /***/ }),
 
@@ -169,6 +157,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+<<<<<<< HEAD
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"seeData\": () => (/* binding */ seeData)\n/* harmony export */ });\nconst reciver = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qVoyo0IhhBeGWoUuwCRg/scores/';\nconst generatedInput = document.querySelector('.generated-input');\n\nconst seeData = async () => {\n  const response = await fetch(reciver, { method: 'GET' });\n  const result = await response.json();\n\n  generatedInput.innerHTML = '';\n  for (let i = 0; i < result.result.length; i += 1) {\n    const displayName = document.createElement('p');\n    generatedInput.appendChild(displayName);\n    displayName.textContent = `${result.result[i].user} : ${result.result[i].score} `;\n  }\n};\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/generateData.js?");
 
 /***/ }),
@@ -181,6 +170,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("module.exports = __webpack_require__.p + \"f8bcd8024cb10a2991c9.jpg\";\n\n//# sourceURL=webpack://leaderboard/./src/img/bg.jpg?");
 >>>>>>> Stashed changes
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"seeData\": () => (/* binding */ seeData)\n/* harmony export */ });\nconst reciver = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qVoyo0IhhBeGWoUuwCRg/scores/';\r\nconst generatedInput = document.querySelector('.generated-input');\r\n\r\nconst seeData = async () => {\r\n  const response = await fetch(reciver, { method: 'GET' });\r\n  const result = await response.json();\r\n\r\n  generatedInput.innerHTML = '';\r\n  for (let i = 0; i < result.result.length; i += 1) {\r\n    const displayName = document.createElement('p');\r\n    generatedInput.appendChild(displayName);\r\n    displayName.textContent = `${result.result[i].user} : ${result.result[i].score} `;\r\n  }\r\n};\r\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/generateData.js?");
+>>>>>>> ab27e57730533f1b373f5c2bde649231677e210b
 
 /***/ })
 
