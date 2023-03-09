@@ -7,15 +7,15 @@ export const sendData = async () => {
   const userScore = inputScore.value;
 
   const data = {
-    user: userName, 
-    score: userScore
+    user: userName,
+    score: userScore,
   };
   const options = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   };
   await fetch(reciver, options);
   inputName.value = '';
