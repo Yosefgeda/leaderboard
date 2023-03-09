@@ -72,6 +72,7 @@
 ### Key Features <a name="key-features"></a>
 
 - User_can_registers_Names_and_scores
+- app fetches data from API
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -152,8 +153,8 @@ To run the project on the html file run it through liveserver.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Project_will_be_refactored_to_Implement_apis]**
-- [ ] **[Refresh_button_will_be_active]**
+- [ ] **[Style_will_be_imlomented_to_page]**
+
 
 <!-- CONTRIBUTING -->
 ## 🤝 Contributing <a name="contributing"></a>
