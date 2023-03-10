@@ -41,7 +41,7 @@
 # 📖 [leaderboard] <a name="about-project"></a>
 
 
-# 📖 [leaderboard]  Webpage to save Name and scores.  
+# 📖  Webpage to save Name and scores.  
 
 ## 🛠 Built With <a name="built-with"></a>
 
