@@ -1,6 +1,5 @@
 # leaderboard
-
-
+![desktop](https://user-images.githubusercontent.com/100337086/232676411-4e1dcd9a-a56a-485a-a646-e5443011b1ff.jpg)
 
 <a name="readme-top"></a>
 
@@ -80,8 +79,7 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Live demo is not yet available
-
+You can view the final page [HERE](https://yosefgeda.github.io/leaderboard/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
