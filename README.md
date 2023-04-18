@@ -48,19 +48,19 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
+  <summary>Structure</summary>
   <ul>
     <li>HTML5</li>
   </ul>
 </details>
 <details>
-  <summary>Client</summary>
+  <summary>Design</summary>
   <ul>
     <li>CSS3</li>
   </ul>
 </details>
 <details>
-  <summary>Client</summary>
+  <summary>Functionality</summary>
   <ul>
     <li>JS</li>
   </ul>
